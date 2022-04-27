@@ -8,6 +8,12 @@ let elDivFillings = document.querySelector(".js-fillings-wrapper");
 let elDivSouses = document.querySelector(".js-souses-wrapper");
 let elPChoosenDough = document.querySelector(".js-dough-type");
 
+// READY ANSWER VARIABLES
+let elReadyAnswerSize = document.querySelector(".size-pizza");
+let warningMessage = "Bo'sh qoldirmang";
+let readyFillingsList = document.querySelector(".js-fillings-list");
+let readySousesList = document.querySelector(".js-souses-list");
+
 // LISTS(ARRAYS)
 let doughTypes = ["small", "middle", "large"];
 let sizeSelectors = [25, 30, 35];
@@ -22,16 +28,27 @@ for (let doughType of doughTypes) {
     elSelectDough.append(elOptionDough);
 }
 
-elDivSizeSelector.addEventListener("submit", function(evt) {
+elSelectDough.addEventListener("change", function(evt) {
     evt.preventDefault();
     
-
+    let readySelected = document.createElement("span");
+    for (readySelected of  doughTypes) {
+         readySelected.textContent = doughTypes;
+    }
+    if(elSelectDough){
+    readySelected.value = readySelected;
+    readySelected.textContent = readySelected;
+    elPChoosenDough.append(readySelected);
+    }
+    else {
+        warningMessage;
+    }
 })
 // ------- DOUGH SELECTION
 
 
 // SIZE SELECTION
-for (let sizeSelector of sizeSelectors) {
+for (var sizeSelector of sizeSelectors) {
     let elInputOptionSize = document.createElement("input");
     let elLabelOptionSize = document.createElement("label");
 
@@ -50,7 +67,20 @@ for (let sizeSelector of sizeSelectors) {
     elInputOptionSize.name = "sizes";
 }
 
-
+elDivSizeSelector.addEventListener("change", function(evt) {
+    evt.preventDefault();
+    
+    if (elDivSizeSelector) {
+        let spanSizeAnswer = document.createElement("span");
+        spanSizeAnswer.textContent = sizeSelector;
+        spanSizeAnswer.value = sizeSelector;
+        elReadyAnswerSize.append(spanSizeAnswer);
+    }
+    else {
+        warningMessage;
+        return;
+    }
+})
 
 // ----------- SIZE SELECTION
 
@@ -75,6 +105,21 @@ for (let fillingsList of fillingsLists) {
     fillingsInputLabel.for = "checkbox-items";
 }
 
+elDivFillings.addEventListener("change", function(evt) {
+    evt.preventDefault();
+
+    if (elDivFillings) {
+        let readyItems = document.createElement("li");
+        for (readyItems of  fillingsLists) {
+            readyItems.textContent = readyItems;
+        }
+        readyItems.value = readyItems;
+        readyFillingsList.append(readyItems);
+    }
+    else {
+        warningMessage;
+    }
+})
 // -------- FILLINGS SELECTION
 
 
@@ -93,4 +138,21 @@ for (let sousesList of sousesLists) {
     elSousesInput.type = "checkbox";
     elSousesInput.className = "checkbox-inputs";
 }
+
+elDivSouses.addEventListener("change", function(evt) {
+    evt.preventDefault();
+
+    if (elDivSouses) {
+        let readyItemsSouse = document.createElement("li");
+        for (readyItemsSouse of  sousesLists) {
+            readyItemsSouse.textContent = readyItemsSouse;
+        }
+        readyItemsSouse.value = readyItemsSouse;
+        readySousesList.append(readyItemsSouse);
+    }
+    else {
+        warningMessage;
+    }
+})
+
 // -------- SOUSES SELECTION
