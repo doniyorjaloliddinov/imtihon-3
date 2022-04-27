@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    src:
+         url('../fonts/aclonica-v18-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/aclonica-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+body {
+    font-family: "Roboto", serif;
+    background-image: url("../img/background-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+
+.site-heading {
+    font-family: "Aclonica", serif;
+    color: rgb(247, 26, 26);
+}
+
+.color-green {
+    color: rgb(0, 255, 64);
+}
+
+.size-select-wrapper {
+    max-width: 300px;
+}
+
+.sizes-style {
+    width: 50px;
+    height: 50px;
+}
+
+.fillings-wrapper {
+    max-width: 150px;
+}
+
+.checkbox-inputs {
+    width: 25px;
+    height: 25px;
+}
+
+.souses-wrapper {
+    max-width: 250px;
+}
+
+.ready-answers {
+    padding: 15px;
+    background-color: rgb(238, 255, 0);
+}
+
+.color-white {
+    color: rgb(253, 0, 0);
+}
+
+.font-size {
+    font-size: 24px;
+}
+
+.order-btn {
+    width: 150px;
+    height: 45px;
+    background-color: rgb(223, 14, 14);
+    color: rgb(255, 255, 255);
+}
+
+.white-color {
+    color: rgb(255, 255, 255);
+}

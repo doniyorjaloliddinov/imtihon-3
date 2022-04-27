@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza 24</title>
+    <link rel="icon" href="./img/logo.jpg">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="site-heading">Pizza delivery</h1>
+
+        <div class="row">
+            <div class="col-6">
+                <form action="https://echo.htmlacademy.ru/" id="main-form" method="POST">
+                    <!-- DOUGH SELECTION -->
+                    <h3 class="color-green dough-heading">Choose type of dough</h3>
+                    <select class="dough-select js-dough-select" name="dough-type" id="">
+                    </select>
+                    <!-- /DOUGH SELECTION -->
+
+                    <!-- SIZE SELECTION -->
+                    <h3 class="color-green size-select-heading mt-4">Choose Size</h3>
+                    <div class="size-select-wrapper js-size-select-wrapper d-flex align-items-center justify-content-between">
+
+                    </div>
+                    <!-- SIZE SELECTION -->
+
+
+                    <!-- FILLING -->
+                    <h3 class="color-green filling-select-heading">Select Fillings</h3>
+                    <div class="fillings-wrapper js-fillings-wrapper d-flex align-items-center justify-content-between flex-column"></div>
+                    <!-- /FILLING -->
+
+
+                    <!-- SOUSES -->
+                    <h3 class="color-green souses-select-heading">Souses</h3>
+                    <div class="souses-wrapper js-souses-wrapper d-flex align-items-center justify-content-between"></div>
+                    <!-- /SOUSES -->
+
+                </form>
+            </div>
+
+            <!-- ========= OUTPUTS, READY LISTS =============== -->
+            <div class="ready-answers-wrapper col-6 ps-5">
+                <div class="ready-answers mt-5 rounded-3">
+                    <p class="dough-type js-dough-type color-white font-size fw-bold ">Dough type:</p>
+                    <p class="size-pizza color-white font-size fw-bold">Size:</p>
+                    <p class="fillings color-white font-size fw-bold">Fillings</p>
+                    <ul class="fillings-list js-fillings-list"></ul>
+                    <p class="souses color-white font-size fw-bold">Souse:</p>
+                    <ul class="souses-list js-souses-list"></ul>
+                    <button class="order-btn font-size js-order-btn border-0 rounded-3" type="submit" form="main-form">Order</button>
+                </div>
+            </div>
+
+            <!-- ========= /OUTPUTS, READY LISTS =============== -->
+        </div>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
